@@ -1,5 +1,5 @@
 ---
-title: 我的第一篇博文 
+title: 折騰HEXO搭建GITHUB BLOG 
 tags: 折腾、hexo、GitHub
 grammar_cjkRuby: true
 ---
