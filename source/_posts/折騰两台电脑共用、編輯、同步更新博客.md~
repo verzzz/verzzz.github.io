@@ -35,7 +35,7 @@ grammar_cjkRuby: true
   git push
 
 *不知道为什么每次push总要填写GitHub的username和密码*
-* 完成上诉命令后执行 git g -d 就可以发布更新博客了。
+* 完成上诉命令后执行 hexo g -d 就可以发布更新博客了。
 
 
 **参考:** [教程1](http://www.jianshu.com/p/0b1fccce74e0)

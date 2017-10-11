@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>折騰两台电脑共用、編輯、同步更新博客 | 爱折腾</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="成功折騰搭建好博客后发现，在两台电脑之间要怎么同步更新博客？在家里的电脑上部署好博客后，在公司电脑上要怎么操作才能编辑、发布更新博客？  在部署好博客的电脑上操作 GitHub 上在 yourname.github.io 上新建一个hexo分支,并将该分支设置为默认branch 将该仓库克隆到本地：git clone https://github.com/yourname/yourname.gi">
+<meta name="keywords" content="多終端、hexo、GitHub、同步更新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="折騰两台电脑共用、編輯、同步更新博客">
+<meta property="og:url" content="http://yoursite.com/2017/10/11/折騰两台电脑共用、編輯、同步更新博客/index.html">
+<meta property="og:site_name" content="爱折腾">
+<meta property="og:description" content="成功折騰搭建好博客后发现，在两台电脑之间要怎么同步更新博客？在家里的电脑上部署好博客后，在公司电脑上要怎么操作才能编辑、发布更新博客？  在部署好博客的电脑上操作 GitHub 上在 yourname.github.io 上新建一个hexo分支,并将该分支设置为默认branch 将该仓库克隆到本地：git clone https://github.com/yourname/yourname.gi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-11T04:47:44.269Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="折騰两台电脑共用、編輯、同步更新博客">
+<meta name="twitter:description" content="成功折騰搭建好博客后发现，在两台电脑之间要怎么同步更新博客？在家里的电脑上部署好博客后，在公司电脑上要怎么操作才能编辑、发布更新博客？  在部署好博客的电脑上操作 GitHub 上在 yourname.github.io 上新建一个hexo分支,并将该分支设置为默认branch 将该仓库克隆到本地：git clone https://github.com/yourname/yourname.gi">
+  
+    <link rel="alternate" href="/atom.xml" title="爱折腾" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">爱折腾</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-折騰两台电脑共用、編輯、同步更新博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/11/折騰两台电脑共用、編輯、同步更新博客/" class="article-date">
+  <time datetime="2017-10-11T04:47:44.329Z" itemprop="datePublished">2017-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      折騰两台电脑共用、編輯、同步更新博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>成功折騰搭建好博客后发现，在两台电脑之间要怎么同步更新博客？在家里的电脑上部署好博客后，在公司电脑上要怎么操作才能编辑、发布更新博客？</p>
+</blockquote>
+<h1 id="在部署好博客的电脑上操作"><a href="#在部署好博客的电脑上操作" class="headerlink" title="在部署好博客的电脑上操作"></a>在部署好博客的电脑上操作</h1><ul>
+<li>GitHub 上在 yourname.github.io 上新建一个hexo分支,并将该分支设置为默认branch</li>
+<li>将该仓库克隆到本地：git clone <a href="https://github.com/yourname/yourname.github.io.git" target="_blank" rel="external">https://github.com/yourname/yourname.github.io.git</a></li>
+<li>克隆完成后进入该文件目录： cd yourname.github.io</li>
+<li>将本地博客的部署文件全部复制粘帖到 yourname.github.io 文件。 <strong>上一篇部署文章，我是把部署文件名为blog，将里面的文件全部复制到 yourname.github.io 文件</strong><blockquote>
+<p>将themes目录以内中的主题的.git目录删除（如果有），因为一个git仓库中不能包含另一个git仓库，提交主题文件夹会失败。</p>
+</blockquote>
+</li>
+<li>将该文件上传到GitHub 的hexo分支上<blockquote>
+<p>执行git add .、git commit -m ‘back up hexo files’（引号内容可改）、git push即可将博客的hexo部署环境提交到GitHub个人仓库的xxx分支。</p>
+</blockquote>
+</li>
+<li>安装 npm install,执行命令 sudo npm install</li>
+</ul>
+<p><strong>在部署好博客电脑上的操作告一段落</strong></p>
+<h2 id="在另一台-多终端-电脑上操作"><a href="#在另一台-多终端-电脑上操作" class="headerlink" title="在另一台(多终端)电脑上操作"></a>在另一台(多终端)电脑上操作</h2><p><em>新电脑不知道要不要跟部署博客的电脑一样部署Hexo，我的办公电脑一样有部署好Hexo</em></p>
+<ul>
+<li>如果新电脑的 ssh key还未添加到GitHub账户上记得先添加，具体教程请另搜索</li>
+<li>在新电脑上将 yourname.github.io仓库克隆到本地<br>因为上面已将hexo分支设置为默认，所以本地git仓库处于hexo分支</li>
+<li>cd yourname.github.io 切换到此目录，看看有没有.deploy_git文件夹，如果有的话删除并重新安装本地的hexo-deployer。查看隐藏文件：Ctrl + H</li>
+<li>在该目录执行 npm instal<blockquote>
+<p>由于仓库有一个.由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录也不需要，所以需要install下</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="新终端编辑、更新发布博客"><a href="#新终端编辑、更新发布博客" class="headerlink" title="新终端编辑、更新发布博客"></a>新终端编辑、更新发布博客</h3><ul>
+<li>新终端按照上面操作后就可以像部署博客的电脑一样操作博客了；</li>
+<li>如果有修改、更新想要同步请依次执行以下命令：<br>git add -A<br>git commit -m ‘back up file’<br>git push</li>
+</ul>
+<p><em>不知道为什么每次push总要填写GitHub的username和密码</em></p>
+<ul>
+<li>完成上诉命令后执行 git g -d 就可以发布更新博客了。</li>
+</ul>
+<p><strong>参考:</strong> <a href="http://www.jianshu.com/p/0b1fccce74e0" target="_blank" rel="external">教程1</a><br>          <a href="http://m.blog.csdn.net/csdn_lisword/article/details/73804982" target="_blank" rel="external">教程2</a></p>
+<hr>
+<p>To be Continue</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/11/折騰两台电脑共用、編輯、同步更新博客/" data-id="cj8mk4lxd0001k9cxa4ytgpcn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多終端、hexo、GitHub、同步更新/">多終端、hexo、GitHub、同步更新</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/11/折騰HEXO搭建GITHUB BLOG/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">折騰HEXO搭建GITHUB BLOG</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/多終端、hexo、GitHub、同步更新/">多終端、hexo、GitHub、同步更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/折腾、hexo、GitHub/">折腾、hexo、GitHub</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/多終端、hexo、GitHub、同步更新/" style="font-size: 10px;">多終端、hexo、GitHub、同步更新</a> <a href="/tags/折腾、hexo、GitHub/" style="font-size: 10px;">折腾、hexo、GitHub</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/11/折騰两台电脑共用、編輯、同步更新博客/">折騰两台电脑共用、編輯、同步更新博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/11/折騰HEXO搭建GITHUB BLOG/">折騰HEXO搭建GITHUB BLOG</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Verz<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
