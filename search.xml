@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[折騰两台电脑共用、編輯、同步更新博客]]></title>
+      <url>/2017/10/11/%E6%8A%98%E9%A8%B0%E4%B8%A4%E5%8F%B0%E7%94%B5%E8%84%91%E5%85%B1%E7%94%A8%E3%80%81%E7%B7%A8%E8%BC%AF%E3%80%81%E5%90%8C%E6%AD%A5%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>成功折騰搭建好博客后发现，在两台电脑之间要怎么同步更新博客？在家里的电脑上部署好博客后，在公司电脑上要怎么操作才能编辑、发布更新博客？</p>
+</blockquote>
+<h1 id="在部署好博客的电脑上操作"><a href="#在部署好博客的电脑上操作" class="headerlink" title="在部署好博客的电脑上操作"></a>在部署好博客的电脑上操作</h1><ul>
+<li>GitHub 上在 yourname.github.io 上新建一个hexo分支,并将该分支设置为默认branch</li>
+<li>将该仓库克隆到本地：git clone <a href="https://github.com/yourname/yourname.github.io.git" target="_blank" rel="external">https://github.com/yourname/yourname.github.io.git</a></li>
+<li>克隆完成后进入该文件目录： cd yourname.github.io</li>
+<li>将本地博客的部署文件全部复制粘帖到 yourname.github.io 文件。<br><strong>上一篇部署文章，我是把部署文件名为blog，将里面的文件全部复制到 yourname.github.io 文件</strong><blockquote>
+<p>将themes目录以内中的主题的.git目录删除（如果有），因为一个git仓库中不能包含另一个git仓库，提交主题文件夹会失败。</p>
+</blockquote>
+</li>
+<li>将该文件上传到GitHub 的hexo分支上<blockquote>
+<p>执行git add .、git commit -m ‘back up hexo files’（引号内容可改）、git push即可将博客的hexo部署环境提交到GitHub个人仓库的xxx分支。</p>
+</blockquote>
+</li>
+<li>安装 npm install,执行命令 sudo npm install</li>
+</ul>
+<p><strong>在部署好博客电脑上的操作告一段落</strong></p>
+<h2 id="在另一台-多终端-电脑上操作"><a href="#在另一台-多终端-电脑上操作" class="headerlink" title="在另一台(多终端)电脑上操作"></a>在另一台(多终端)电脑上操作</h2><p><em>新电脑不知道要不要跟部署博客的电脑一样部署Hexo，我的办公电脑一样有部署好Hexo</em></p>
+<ul>
+<li>如果新电脑的 ssh key还未添加到GitHub账户上记得先添加，具体教程请另搜索</li>
+<li>在新电脑上将 yourname.github.io仓库克隆到本地<br>因为上面已将hexo分支设置为默认，所以本地git仓库处于hexo分支</li>
+<li>cd yourname.github.io 切换到此目录，看看有没有.deploy_git文件夹，如果有的话删除并重新安装本地的hexo-deployer。查看隐藏文件：Ctrl + H</li>
+<li>在该目录执行 npm instal<blockquote>
+<p>由于仓库有一个.由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录也不需要，所以需要install下</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="新终端编辑、更新发布博客"><a href="#新终端编辑、更新发布博客" class="headerlink" title="新终端编辑、更新发布博客"></a>新终端编辑、更新发布博客</h3><ul>
+<li>新终端按照上面操作后就可以像部署博客的电脑一样操作博客了；</li>
+<li>如果有修改、更新想要同步请依次执行以下命令：<br>git add -A<br>git commit -m ‘back up file’<br>git push</li>
+</ul>
+<p><em>不知道为什么每次push总要填写GitHub的username和密码</em></p>
+<ul>
+<li>完成上诉命令后执行 sudo hexo g -d 就可以发布更新博客了。</li>
+</ul>
+<p><strong>参考:</strong> <a href="http://www.jianshu.com/p/0b1fccce74e0" target="_blank" rel="external">教程1</a><br>                <a href="http://m.blog.csdn.net/csdn_lisword/article/details/73804982" target="_blank" rel="external">教程2</a></p>
+<hr>
+<p>To be Continue</p>
+<hr>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 多終端、hexo、GitHub、同步更新 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[折騰HEXO搭建GITHUB BLOG]]></title>
+      <url>/2017/10/11/%E6%8A%98%E9%A8%B0HEXO%E6%90%AD%E5%BB%BAGITHUB%20BLOG/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>根据网上搜索到教程，折腾了一天，写下此文以记录一个小白瞎折腾的历程。</p>
+<h1 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h1><p>操作系统为Ubuntu 16.04，此前已装好GIT、NODEJS，按照此教程的方法，还得nvm安装Node.js<br>教程1：<a href="http://www.jianshu.com/p/4eaddcbe4d12" target="_blank" rel="external">enter description here</a><br>但是这个教程里没说明要怎么安装nvm呀（黑人问号脸？？？）<br>什么 pip \ apt-get \ wget \ curl…所有目前我知道的安装命令都试了个遍，就是无法安装nvm。<br>        所以就只有继续问度娘了（暂时去不了谷爷家），找了几篇安装nvm的教程，最后在这一教程里找到成功安装nvm的方法。<br>        wget -qO- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash<br>        教程2：<a href="http://blog.csdn.net/aym_fuhong/article/details/53046585?locationNum=1&amp;fps=1" target="_blank" rel="external">enter description here</a><br>成功安装nvm后就可以继续装逼下去了，按照教程1继续安装好Node.js，我直接用命令安装 “ nvm install node”，而不是选择版本号安装，这样它会安装当前最新版本的。</p>
+</blockquote>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><blockquote>
+<p>接下来我们需要用Hexo初始化一个博客，然后更改一些自定义的配置，或者加上自己喜欢的主题，写上第一篇文章，然后发布到自己的个人Github网站(username.github.io)。</p>
+</blockquote>
+<p><em>起初按照教程初始化一个博客时会出现我看不懂的报错，但博客是初始化“成功的”，可以看到文件夹，里面相应的文件也一并都有。输入命令测试 hexo s ，报错。
+</em>后来想想会不会加个SU权限会好一点，然后就重新初始化一个博客，使用” sudo hexo init filename “，这下没报错了。往后的操作都加“sudo”来进行。”sudo gedit _config.yml” 来编辑配置文件，测试成功。</p>
+<h3 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h3><p>进行到上面那个步骤内心是十分欢喜的，毕竟离成功又近了一步。<br>待看到试着发布自己第一篇博文时，说到按Markdown语法编写md文件，一下子懵圈了，Markdown语法是什么鬼？我是小白呀，我什么都不懂呀，所以又只能靠度娘了。最后找到了一个<a href="http://markdown.xiaoshujiang.com/" target="_blank" rel="external">在线编辑器</a>。此文就是在编辑器中编写的。<br>看教程，<strong>粗体字是不是这样？</strong><br><em>斜体字是这样的？</em><br>–那这样会不会加个删除线–<br>看来是不会。。。</p>
+<p>好吧，先这样，我要试试把这篇文发出去。</p>
+<p>好吧，发出去一次。这是第二次编辑。<br>先说说这个在线编辑器吧，如果要保存到本地还得先绑定第三方存储。<br>所以我只能全选再复制粘贴。T_T</p>
+<h4 id="安装hexo-deployer-git自动部署发布工具"><a href="#安装hexo-deployer-git自动部署发布工具" class="headerlink" title="安装hexo-deployer-git自动部署发布工具"></a>安装hexo-deployer-git自动部署发布工具</h4><p>按照教程一步一步来，却总是报错。后来在知乎看到有人也在问这个问题，原来是我没把这台电脑的SSH加到githubu上==#<br>将SSH加进去后终于成功了。<br>接下来就是生成静态网页文件发布至我们的Github pages 中，<br>照教程那个三连发的命令 “$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d”<br>老是报错，所以我又只能一个一个命令输入了。<br>好在，最后成功了。<br>在地址栏输入：verzzz.github.io 就能打开博客了。</p>
+<h5 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h5><p>折腾了一天，结合网上众多教程终于搞定了。<br>过程中好多命令都看不懂，只能依样画葫芦，也因为不懂，走了好多弯路，浪费了好多时间。<br>好吧，以后再继续折腾吧。<br>折腾不止，生命不息。</p>
+<hr>
+<p>To be Continue</p>
+<hr>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 折腾、hexo、GitHub </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/10/09/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
